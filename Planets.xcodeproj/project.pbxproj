@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA439131245DF153005E7506 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA439130245DF153005E7506 /* data.plist */; };
 		BAB6DB652459D34000832C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6DB642459D34000832C7D /* AppDelegate.swift */; };
 		BAB6DB672459D34000832C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6DB662459D34000832C7D /* SceneDelegate.swift */; };
 		BAB6DB692459D34000832C7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6DB682459D34000832C7D /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA439130245DF153005E7506 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		BAB6DB612459D34000832C7D /* Planets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB6DB642459D34000832C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB6DB662459D34000832C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				BAB6DB6A2459D34000832C7D /* Main.storyboard */,
 				BAB6DB702459D34700832C7D /* Assets.xcassets */,
 				BAB6DB722459D34700832C7D /* LaunchScreen.storyboard */,
+				BA439130245DF153005E7506 /* data.plist */,
 				BAB6DB752459D34700832C7D /* Info.plist */,
 				BAB6DB6D2459D34000832C7D /* Planets.xcdatamodeld */,
 			);
@@ -130,6 +133,7 @@
 			files = (
 				BAB6DB742459D34700832C7D /* LaunchScreen.storyboard in Resources */,
 				BAB6DB712459D34700832C7D /* Assets.xcassets in Resources */,
+				BA439131245DF153005E7506 /* data.plist in Resources */,
 				BAB6DB6C2459D34000832C7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
