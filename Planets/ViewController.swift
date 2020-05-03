@@ -7,8 +7,6 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-    
-    var planetsStringArray = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
     var planetsArray: [Planet] = []
     var context: NSManagedObjectContext!
 
@@ -22,7 +20,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        getDataFromFile()
+        
+        if !(UserSettings.isDataFromFileLoaded) {
+            getDataFromFile()
+            UserSettings.isDataFromFileLoaded = true
+        }
         fetchData()
     
         planetsPickerView.delegate = self
@@ -36,6 +38,7 @@ class ViewController: UIViewController {
                                          width: view.frame.width,
                                          height: pickerViewHeight)
         planetsPickerView.center.x = view.center.x
+        updateLabels(toSunDistance: planetsArray[0].toSunDistance, averageTemparature: planetsArray[0].averageTemperature)
         
     }
     
@@ -47,18 +50,6 @@ class ViewController: UIViewController {
     // MARK: - Supporting methods
     
     private func getDataFromFile () {
-        let fetchRequest: NSFetchRequest<Planet> = Planet.fetchRequest()
-
-        var records = 0
-        
-        do {
-            records = try context.count(for: fetchRequest)
-        } catch let error {
-            print(error.localizedDescription)
-        }
-        
-        guard records == 0 else { return }
-        
         guard   let path = Bundle.main.path(forResource: "data", ofType: "plist"),
                 let dataArray = NSArray(contentsOfFile: path) else { return }
         
@@ -72,13 +63,19 @@ class ViewController: UIViewController {
         
             guard   let avgTemperature = (planetDict["averageTemparature"] as? NSNumber)?.intValue,
                     let toSunDistance = (planetDict["toSunDistance"] as? NSNumber)?.floatValue else { return }
+            planet.toSunDistance = toSunDistance
             guard   avgTemperature == Int16(avgTemperature) else { return }
             planet.averageTemperature = Int16(avgTemperature)
-            planet.toSunDistance = toSunDistance
             
             if let imageName = planetDict["imageName"] as? String, let image = UIImage(named: imageName) {
                 let imageData = image.pngData()
                 planet.imageData = imageData
+            }
+            
+            do {
+                try context.save()
+            } catch let error {
+                print(error.localizedDescription)
             }
         }
     }

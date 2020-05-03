@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA439131245DF153005E7506 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA439130245DF153005E7506 /* data.plist */; };
+		BA439133245E0A21005E7506 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA439132245E0A20005E7506 /* UserSettings.swift */; };
 		BAB6DB652459D34000832C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6DB642459D34000832C7D /* AppDelegate.swift */; };
 		BAB6DB672459D34000832C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6DB662459D34000832C7D /* SceneDelegate.swift */; };
 		BAB6DB692459D34000832C7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6DB682459D34000832C7D /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		BA439130245DF153005E7506 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		BA439132245E0A20005E7506 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		BAB6DB612459D34000832C7D /* Planets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB6DB642459D34000832C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB6DB662459D34000832C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				BA439130245DF153005E7506 /* data.plist */,
 				BAB6DB752459D34700832C7D /* Info.plist */,
 				BAB6DB6D2459D34000832C7D /* Planets.xcdatamodeld */,
+				BA439132245E0A20005E7506 /* UserSettings.swift */,
 			);
 			path = Planets;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				BAB6DB692459D34000832C7D /* ViewController.swift in Sources */,
 				BAB6DB652459D34000832C7D /* AppDelegate.swift in Sources */,
 				BAB6DB672459D34000832C7D /* SceneDelegate.swift in Sources */,
+				BA439133245E0A21005E7506 /* UserSettings.swift in Sources */,
 				BAB6DB6F2459D34000832C7D /* Planets.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
